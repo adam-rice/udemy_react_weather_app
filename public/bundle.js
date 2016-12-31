@@ -59,8 +59,8 @@
 	__webpack_require__(233);
 	var Main = __webpack_require__(237);
 	var Weather = __webpack_require__(239);
-	var About = __webpack_require__(240);
-	var Examples = __webpack_require__(241);
+	var About = __webpack_require__(242);
+	var Examples = __webpack_require__(243);
 
 	ReactDOM.render(React.createElement(
 	  Router,
@@ -26427,7 +26427,7 @@
 
 
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n#nav-bar {\n  background-color: navy;\n  display: flex;\n  align-items: center;\n  height: 50px;\n  width: 100%; }\n\n.nav-btn {\n  color: white;\n  font-size: 2em;\n  margin: 0 20px;\n  text-decoration: none; }\n  .nav-btn:hover {\n    color: lightgreen;\n    cursor: pointer; }\n", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n#nav-bar {\n  background-color: navy;\n  display: flex;\n  align-items: center;\n  height: 50px;\n  width: 100%; }\n\n.nav-btn {\n  color: white;\n  font-size: 2em;\n  margin: 0 20px;\n  text-decoration: none; }\n  .nav-btn:hover {\n    color: lightgreen;\n    cursor: pointer; }\n\n.active {\n  background-color: darkgreen; }\n\n#get-weather {\n  margin-top: 100px;\n  text-align: center; }\n\nh1, h3 {\n  font-size: 1.5em;\n  margin: 20px; }\n\ninput {\n  display: block;\n  margin: 10px auto;\n  text-indent: 8px; }\n\nbutton, input {\n  border-radius: 5px;\n  height: 25px;\n  width: 200px; }\n\nbutton {\n  background-color: lightgrey; }\n  button:hover {\n    cursor: pointer; }\n", ""]);
 
 	// exports
 
@@ -26775,7 +26775,8 @@
 	var React = __webpack_require__(1);
 
 	var _require = __webpack_require__(178),
-	    Link = _require.Link;
+	    Link = _require.Link,
+	    IndexLink = _require.IndexLink;
 
 	var Navigation = React.createClass({
 	  displayName: 'Navigation',
@@ -26785,18 +26786,27 @@
 	      'div',
 	      { id: 'nav-bar' },
 	      React.createElement(
-	        Link,
-	        { className: 'nav-btn', to: '/' },
+	        IndexLink,
+	        {
+	          className: 'nav-btn',
+	          activeClassName: 'active',
+	          to: '/' },
 	        'Get Weather'
 	      ),
 	      React.createElement(
 	        Link,
-	        { className: 'nav-btn', to: '/about' },
+	        {
+	          className: 'nav-btn',
+	          activeClassName: 'active',
+	          to: '/about' },
 	        'About'
 	      ),
 	      React.createElement(
 	        Link,
-	        { className: 'nav-btn', to: '/examples' },
+	        {
+	          className: 'nav-btn',
+	          activeClassName: 'active',
+	          to: '/examples' },
 	        'Examples'
 	      )
 	    );
@@ -26813,15 +26823,23 @@
 
 	/*jshint esversion: 6 */
 	var React = __webpack_require__(1);
+	var WeatherForm = __webpack_require__(240);
+	var WeatherMessage = __webpack_require__(241);
 
 	var Weather = React.createClass({
 	  displayName: 'Weather',
 
 	  render: function render() {
 	    return React.createElement(
-	      'p',
-	      null,
-	      'Weather'
+	      'div',
+	      { id: 'get-weather' },
+	      React.createElement(
+	        'h1',
+	        null,
+	        'Get Weather'
+	      ),
+	      React.createElement(WeatherForm, null),
+	      React.createElement(WeatherMessage, null)
 	    );
 	  }
 	});
@@ -26830,6 +26848,60 @@
 
 /***/ },
 /* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	/*jshint esversion: 6 */
+	var React = __webpack_require__(1);
+
+	var WeatherForm = React.createClass({
+	  displayName: "WeatherForm",
+
+	  render: function render() {
+	    return React.createElement(
+	      "form",
+	      null,
+	      React.createElement("input", {
+	        type: "text",
+	        placeholder: "Enter City Name"
+	      }),
+	      React.createElement(
+	        "button",
+	        null,
+	        "Get Weather"
+	      )
+	    );
+	  }
+	});
+
+	module.exports = WeatherForm;
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	/*jshint esversion: 6 */
+	var React = __webpack_require__(1);
+
+	var WeatherMessage = React.createClass({
+	  displayName: 'WeatherMessage',
+
+	  render: function render() {
+	    return React.createElement(
+	      'h3',
+	      null,
+	      'test'
+	    );
+	  }
+	});
+
+	module.exports = WeatherMessage;
+
+/***/ },
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26852,7 +26924,7 @@
 	module.exports = About;
 
 /***/ },
-/* 241 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -18,3 +18,36 @@
     cursor: pointer;
   }
 }
+
+.active {
+  background-color: darkgreen;
+}
+
+#get-weather {
+  margin-top: 100px;
+  text-align: center;
+}
+
+h1, h3 {
+  font-size: 1.5em;
+  margin: 20px;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  text-indent: 8px;
+}
+
+button, input {
+  border-radius: 5px;
+  height: 25px;
+  width: 200px;
+}
+
+button {
+  background-color: lightgrey;
+  &:hover {
+    cursor: pointer;
+  }
+}
