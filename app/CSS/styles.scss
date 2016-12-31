@@ -1,0 +1,20 @@
+@import 'reset';
+
+#nav-bar {
+  background-color: navy;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+
+.nav-btn {
+  color: white;
+  font-size: 2em;
+  margin: 0 20px;
+  text-decoration: none;
+  &:hover {
+    color: lightgreen;
+    cursor: pointer;
+  }
+}

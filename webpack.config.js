@@ -8,9 +8,13 @@ module.exports = {
     root: __dirname,
     alias: {
       Main: 'app/components/Main.jsx',
-      Navigation: 'app/components/Navigation.jsx'
+      Navigation: 'app/components/Navigation.jsx',
+      Weather: 'app/components/Weather.jsx',
+      About: 'app/components/About.jsx',
+      Examples: 'app/components/Examples.jsx',
+      Styles: 'app/CSS/styles.scss'
     },
-    extenstions: ['', '.js', '.jsx'],
+    extenstions: ['', '.js', '.jsx', '.json', '.scss', '.css'],
   },
   module: {
     loaders: [
@@ -21,7 +25,9 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
-      }
+      },
+      { test: /\.css$/, loader: 'style!css' },
+      { test: /\.scss$/, loader: 'style!css!sass' },
     ]
   }
 };
