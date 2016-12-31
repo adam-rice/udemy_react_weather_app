@@ -4,7 +4,7 @@ var React = require('react');
 var Examples = React.createClass( {
   render: function () {
     return (
-      <p>Examples</p>
+      <p id="examples">coming soon...</p>
     );
   }
 });

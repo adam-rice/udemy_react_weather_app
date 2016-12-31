@@ -4,7 +4,7 @@ var React = require('react');
 var About = React.createClass( {
   render: function () {
     return (
-      <p>About</p>
+      <p id="about">This application is part of the Udemy course The Complete React Web App Developer.<br></br>The API is called from <a href="http://openweathermap.org/" target="_blank">openweathermap.org</a>.</p>
     );
   }
 });
