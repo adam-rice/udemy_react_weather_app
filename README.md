@@ -2,6 +2,8 @@
 
 In development...
 
+API provided by [openweathermap.org](http://openweathermap.org/)
+
 To view the app:
 - Clone this repository then cd into the udemy_react_weather_app directory
 - `webpack`
