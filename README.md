@@ -9,3 +9,5 @@ To view the app:
 - `webpack`
 - `node server.js`
 - Visit the URL: http://localhost:3000/
+
+![screen-grab](https://github.com/adam-rice/udemy_react_weather_app/blob/master/screen.png)

@@ -4,7 +4,7 @@ const Navigation = require('Navigation');
 
 const Main = (props) => {
   return (
-    <div>
+    <div id="body">
       <Navigation/>
       {props.children}
     </div>
