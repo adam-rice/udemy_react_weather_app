@@ -1,16 +1,14 @@
 /*jshint esversion: 6 */
-var React = require('react');
-var Navigation = require('Navigation');
+const React = require('react');
+const Navigation = require('Navigation');
 
-var Main = React.createClass( {
-  render: function () {
-    return (
-      <div>
-        <Navigation/>
-        {this.props.children}
-      </div>
-    );
-  }
-});
+const Main = (props) => {
+  return (
+    <div>
+      <Navigation/>
+      {props.children}
+    </div>
+  );
+}
 
 module.exports = Main;
