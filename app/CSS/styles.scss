@@ -47,7 +47,9 @@ button, input {
 
 button {
   background-color: lightgrey;
+  outline: none;
   &:hover {
     cursor: pointer;
+    background-color: lightgreen;
   }
 }
